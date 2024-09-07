@@ -1,0 +1,58 @@
+/* General body styling */
+body {
+    font-family: 'Hurricane', cursive;
+    background-color: #0A192F; /* Dark blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #64ffda; /* Light cyan text */
+}
+
+/* Container for the error message */
+.error-container {
+    background-color: #112240; /* Slightly lighter dark blue for contrast */
+    border: 2px solid #64ffda; /* Light cyan border */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2); /* Light cyan shadow */
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title styling */
+.error-title {
+    font-size: 36px;
+    color: #64ffda; /* Light cyan */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Message styling */
+.error-message {
+    font-size: 24px;
+    color: #a8b2d1; /* Light gray for readability */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.error-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #0A192F; /* Dark blue text */
+    background-color: #64ffda; /* Light cyan background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.error-button:hover {
+    background-color: #52e0c4; /* Slightly darker cyan on hover */
+}

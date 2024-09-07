@@ -1,0 +1,173 @@
+/* General body styles */
+body {
+    background-color: #0A192F;
+    color: #64ffda;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Filters Container */
+.filters {
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    color: #64ffda;
+}
+
+.filters h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Filter Sections */
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.filter input[type="number"],
+.filter input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0A192F;
+    color: #64ffda;
+    margin-right: 10px;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+/* Checkbox styles */
+.filter input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Apply Filters Button */
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #64ffda;
+    color: #0A192F;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #52e0bf;
+}
+
+/* Search form styles */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 300px;
+    margin-right: 10px;
+    background-color: #112240;
+    color: #64ffda;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #64ffda;
+    color: #0A192F;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #52e0bf;
+}
+
+/* Artist container and cards */
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.artist {
+    background-color: #1d2a39;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.artist:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.artist h2 {
+    font-size: 1.5rem;
+}
+
+.artist img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* No results message */
+.no-results {
+    text-align: center;
+    color: #8892b0;
+    padding: 20px;
+    background-color: #1d2a39;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.no-results p {
+    font-size: 1.5rem;
+}
+
+.error-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #64ffda;
+    color: #0A192F;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.error-button:hover {
+    background-color: #52e0bf;
+}

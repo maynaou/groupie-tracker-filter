@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Artists</h1>
+
+    <!-- Search Form -->
+    <form action="/artist" method="get">
+        <div class="filters">
+            <h2>Filter Artists</h2>
+
+            <!-- Range Filter: Filter by creation date -->
+            <div class="filter">
+                <h3>Creation Date</h3>
+                <label for="creationStart">From:</label>
+                <input type="number" id="creationStart" name="creationStart" min="1950" max="2023" placeholder="1950">
+                <label for="creationEnd">To:</label>
+                <input type="number" id="creationEnd" name="creationEnd" min="1950" max="2023" placeholder="2023">
+            </div>
+
+            <!-- Range Filter: Filter by first album date -->
+            <div class="filter">
+                <h3>First Album Date</h3>
+                <label for="albumStart">From:</label>
+                <input type="number" id="albumStart" name="albumStart" min="1950" max="2023" placeholder="1950">
+                <label for="albumEnd">To:</label>
+                <input type="number" id="albumEnd" name="albumEnd" min="1950" max="2023" placeholder="2023">
+            </div>
+
+            <!-- Checkbox Filter: Filter by number of members -->
+            <div class="filter">
+                <h3>Number of Members</h3>
+                <label><input type="checkbox" name="members" value="1"> 1 Member</label><br>
+                <label><input type="checkbox" name="members" value="2"> 2 Members</label><br>
+                <label><input type="checkbox" name="members" value="3"> 3 Members</label><br>
+                <label><input type="checkbox" name="members" value="4"> 4 Members</label><br>
+                <label><input type="checkbox" name="members" value="5"> 5 Members</label><br>
+                <label><input type="checkbox" name="members" value="6"> 6 Members</label><br>
+                <label><input type="checkbox" name="members" value="7"> 7 Members</label><br>
+                <label><input type="checkbox" name="members" value="8"> 8 Members</label><br>
+            </div>
+
+            <!-- Location Search -->
+            <div class="filter">
+                <h3>Concert Locations</h3>
+                <label for="locationSearch">Search Locations:</label>
+                <input type="text" id="locationSearch" name="locationSearch" placeholder="Enter location">
+            </div>
+
+            <!-- Apply Filters Button -->
+            <button type="submit">Apply Filters</button>
+        </div>
+    </form>
+
+    <div class="artist-container {{if .Query}}search-results{{end}}">
+        {{if .Artists}}
+        {{range .Artists}}
+        <div class="artist">
+            <div class="artist-info">
+                <a href="/details?id={{.ID}}">
+                    <img src="{{.Image}}" alt="{{.Name}}">
+                </a>
+                <h2>{{.Name}}</h2>
+            </div>
+        </div>
+        {{end}}
+        {{else}}
+        <div class="no-results">
+            <p>No results found for your search.</p>
+            <a href="/artist" class="error-button">Go Back Home</a>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
